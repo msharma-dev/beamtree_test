@@ -1,3 +1,5 @@
+<div class="row">
+<div class="col-md-4">
 <%= form_with(model: event, local: true) do |form| %>
   <% if event.errors.any? %>
     <div id="error_explanation">
@@ -10,43 +12,44 @@
       </ul>
     </div>
   <% end %>
-
+  <div class="mb-3">
+    <%= form.label :code, :class=>'form-label' %>
+    <%= form.text_field :code, :class=>'form-control',:required => true %>
+  </div>
   <div class="field">
-    <%= form.label :code %>
-    <%= form.text_field :code %>
+    <%= form.label :first_name, :class=>'form-label' %>
+    <%= form.text_field :first_name, :class=>'form-control',:required => true %>
   </div>
 
   <div class="field">
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name %>
+    <%= form.label :last_name, :class=>'form-label' %>
+    <%= form.text_field :last_name, :class=>'form-control',:required => true %>
   </div>
 
   <div class="field">
-    <%= form.label :last_name %>
-    <%= form.text_field :last_name %>
+    <%= form.label :dob, :class=>'form-label' %>
+    <%= form.date_field :dob, :class=>'form-control',:required => true %>
   </div>
 
   <div class="field">
-    <%= form.label :dob %>
-    <%= form.text_field :dob %>
+    <%= form.label :event_name, :class=>'form-label' %>
+    <%= form.text_field :event_name, :class=>'form-control',:required => true %>
   </div>
 
   <div class="field">
-    <%= form.label :event_name %>
-    <%= form.text_field :event_name %>
+    <%= form.label :event_type, :class=>'form-label' %>
+    <%= form.text_field :event_type, :class=>'form-control',:required => true %>
   </div>
 
   <div class="field">
-    <%= form.label :event_type %>
-    <%= form.text_field :event_type %>
-  </div>
-
-  <div class="field">
-    <%= form.label :summary %>
-    <%= form.text_field :summary %>
+    <%= form.label :summary, :class=>'form-label' %>
+    <%= form.text_area :summary, :class=>'form-control',:rows=>5,:required => true %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit :'Save',:class=>'btn btn-primary' %>
   </div>
 <% end %>
+
+</div>
+</div>

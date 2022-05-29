@@ -2,13 +2,14 @@
 
 <h1>Events</h1>
 
-<table>
+<%= link_to 'New Event', new_event_path,:class=>'float-end' %>
+<table class="table table-stripped">
   <thead>
     <tr>
       <th>Code</th>
       <th>First name</th>
       <th>Last name</th>
-      <th>Dob</th>
+      <th>DOB</th>
       <th>Event name</th>
       <th>Event type</th>
       <th>Summary</th>
@@ -17,6 +18,7 @@
   </thead>
 
   <tbody>
+  <% if @events.length>0%>
     <% @events.each do |event| %>
       <tr>
         <td><%= event.code %></td>
@@ -26,14 +28,13 @@
         <td><%= event.event_name %></td>
         <td><%= event.event_type %></td>
         <td><%= event.summary %></td>
-        <td><%= link_to 'Show', event %></td>
         <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    <%else %>
+    <tr>
+        <td colspan="8">No records</td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Event', new_event_path %>

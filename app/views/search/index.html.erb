@@ -1,7 +1,22 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-4">
+  <%= form_with do |form| %>
+    <div class="mb-3">
+      <%= form.label :'', :class=>'form-label' %>
+      <%= form.text_field :code, :class=>'form-control',:placeholder=>'Search',:required => true %>
+    </div>
+  </div>
+  <div class="col-md-2">
+  <div class="mb-3">
+      <%= form.label :'Search', :class=>'form-label' %>
+      <%= form.submit :'Search',:class=>'btn btn-primary' %>
+    </div>
+  </div>
+</div>
 
-<h1>People</h1>
-<%= link_to 'New Person', new_person_path,:class=>'float-end' %>
+
+<div class="row">
+<div class="col-md-12">
 <table class="table table-stripped">
   <thead>
     <tr>
@@ -35,3 +50,6 @@
     <% end %>
   </tbody>
 </table>
+</div>
+</div>
+  <% end %>
