@@ -13,7 +13,10 @@ Understanding the user story and deciding to the solution
 
 System should have some sort of unique identified in both the datastores to identify each person because there are very high changes that there will be multiple people with same name and DOB.
 
-# App Details
+## Assumptions
+Events table will get new events from SQS/ SNS (depending on the configuration) and user will be allowed to add new events manually as well.
+
+## App Details
 
  1. Language: Ruby 2.5.5
  2. Framework: Rails 6.0.5
