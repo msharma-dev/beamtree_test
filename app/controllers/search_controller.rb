@@ -2,7 +2,8 @@ class SearchController < ApplicationController
     def index
         @searchtext = params['searchtext']
         if !@searchtext.blank?
-            @people = Person.all.where(:code=>@searchtext)
+            @people = Person.where("lower(code) like '%#{@searchtext.downcase}%' or lower(first_name) like '%#{@searchtext.downcase}%' or lower(last_name) like '%#{@searchtext.downcase}%' or lower(email) like '%#{@searchtext.downcase}%' or lower(address) like '%#{@searchtext.downcase}%'")
+            # @people = Person.all
         else
             @people = Person.all
         end
