@@ -1,29 +1,35 @@
+<h1>Person Details</h1>
+<h5><%= @person.first_name %> <%= @person.last_name %></h5>
 <p id="notice"><%= notice %></p>
+<div class="row">
+<div class="col-md-6">
 
-<p>
-  <strong>Code:</strong>
-  <%= @person.code %>
-</p>
-
-<p>
-  <strong>First name:</strong>
-  <%= @person.first_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @person.last_name %>
-</p>
-
-<p>
-  <strong>Dob:</strong>
-  <%= @person.dob %>
-</p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @person.address %>
-</p>
-
-<%= link_to 'Edit', edit_person_path(@person) %> |
+<table class="table table-stripped">
+<tr>
+<td><strong>Code:</strong><td>
+<td><%= @person.code %><td>
+</tr>
+<tr>
+<td><strong>First name:</strong><td>
+<td><%= @person.first_name %><td>
+</tr>
+<tr>
+<td><strong>Last name:</strong><td>
+<td><%= @person.last_name %><td>
+</tr>
+<tr>
+<td><strong>Dob:</strong><td>
+<td><%= @person.dob %><td>
+</tr>
+<tr>
+<td><strong>Address:</strong><td>
+<td><%= @person.address %><td>
+</tr>
+<tr>
+<td><strong>Email:</strong><td>
+<td><%= @person.email %><td>
+</tr>
+<table>
+</div>
+</div>
 <%= link_to 'Back', people_path %>
