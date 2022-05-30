@@ -15,6 +15,7 @@ System should have some sort of unique identified in both the datastores to iden
 
 ## Assumptions
 Events table will get new events from SQS/ SNS (depending on the configuration) and user will be allowed to add new events manually as well.
+There are no duplicate data in Person Table/ datastore
 
 ## App Details
 

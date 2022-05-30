@@ -8,7 +8,7 @@ class PeopleController < ApplicationController
 
   # GET /people/1 or /people/1.json
   def show
-    @events = Event.all.where(:code => @person.code)
+    @events = Event.all.where(:first_name => @person.first_name, :last_name=>@person.last_name, :dob=>@person.dob)
   end
 
   # GET /people/new

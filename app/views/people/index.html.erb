@@ -5,7 +5,6 @@
 <table class="table table-stripped">
   <thead>
     <tr>
-      <th>Code</th>
       <th>First name</th>
       <th>Last name</th>
       <th>Dob</th>
@@ -19,7 +18,6 @@
   <% if @people.length>0%>
     <% @people.each do |person| %>
       <tr>
-        <td><%= person.code %></td>
         <td><%= person.first_name %></td>
         <td><%= person.last_name %></td>
         <td><%= person.dob %></td>

@@ -6,7 +6,6 @@
 <table class="table table-stripped">
   <thead>
     <tr>
-      <th>Code</th>
       <th>First name</th>
       <th>Last name</th>
       <th>DOB</th>
@@ -21,7 +20,6 @@
   <% if @events.length>0%>
     <% @events.each do |event| %>
       <tr>
-        <td><%= event.code %></td>
         <td><%= event.first_name %></td>
         <td><%= event.last_name %></td>
         <td><%= event.dob %></td>

@@ -12,10 +12,6 @@
       </ul>
     </div>
   <% end %>
-  <div class="mb-3">
-    <%= form.label :code, :class=>'form-label' %>
-    <%= form.text_field :code, :class=>'form-control',:required => true %>
-  </div>
   <div class="field">
     <%= form.label :first_name, :class=>'form-label' %>
     <%= form.text_field :first_name, :class=>'form-control',:required => true %>
@@ -38,11 +34,11 @@
 
   <div class="field">
     <%= form.label :event_type, :class=>'form-label' %>
-    <%= form.text_field :event_type, :class=>'form-control',:required => true %>
+    <%= form.select :'event_type', ["Consultancy","Blood Test","X-Ray","MRI","CT Scan","Summary/ Test Results"], {}, {class: "form-control"}%>
   </div>
 
   <div class="field">
-    <%= form.label :summary, :class=>'form-label' %>
+    <%= form.label :'Summary/ Results', :class=>'form-label' %>
     <%= form.text_area :summary, :class=>'form-control',:rows=>5,:required => true %>
   </div>
 
